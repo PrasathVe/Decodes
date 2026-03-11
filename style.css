@@ -1,0 +1,271 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.Landing{
+height:100vh;
+width:100%;
+position:relative;
+overflow:hidden;
+background:#0f0f1a;
+display:flex;
+flex-direction:column;
+}
+.hero{
+min-height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:0 20px;
+color:white;
+position:relative;
+margin-top:80px;
+}
+
+
+.Landing::before{
+content:"";
+position:absolute;
+width:200%;
+height:200%;
+background:linear-gradient(45deg,#FF0000,#FF7F00,#FFFF00,#00FF00,#0000FF,#6600FF,#8B00FF);
+background-size:400% 400%;
+animation:gradientMove 12s ease infinite;
+filter:blur(120px);
+opacity:.4;
+z-index:0;
+}
+
+@keyframes gradientMove{
+0%{background-position:0% 50%}
+50%{background-position:100% 50%}
+100%{background-position:0% 50%}
+}
+
+
+.blob{
+position:absolute;
+border-radius:50%;
+filter:blur(50px);
+opacity:.5;
+animation:float 10s infinite ease-in-out;
+}
+
+.blob1{
+width:250px;
+height:250px;
+background:#ff3cac;
+top:20%;
+left:10%;
+}
+
+.blob2{
+width:300px;
+height:300px;
+background:#ffd21f;
+bottom:10%;
+right:15%;
+animation-delay:4s;
+}
+
+@keyframes float{
+0%,100%{transform:translateY(0)}
+50%{transform:translateY(-40px)}
+}
+
+
+.hero h1{
+font-size:4rem;
+font-weight:700;
+margin-bottom:20px;
+background:linear-gradient(90deg,#FF3E9B,#FF88BA,#3A8B95,#66D0BC);
+-webkit-background-clip:text;
+background-size:400% 400%;
+animation:gradientMove 12s ease infinite;
+-webkit-text-fill-color:transparent;
+}
+.about-me{
+    max-width:600px;
+    margin:40px auto;
+    text-align:center;
+    padding:20px;
+}
+
+.profile-pic{
+    width:160px;
+    height:160px;
+    border-radius:50%;
+    object-fit:cover;
+    margin-bottom:20px;
+}
+
+.about-me h1{
+    margin-bottom:10px;
+}
+
+.about-me p{
+    font-size:16px;
+    line-height:1.6;
+}
+
+.hero p{
+max-width:650px;
+line-height:1.6;
+font-size:1.1rem;
+opacity:.9;
+animation:fadeUp 1.5s ease;
+}
+.hero-btn{
+margin-top:30px;
+padding:14px 34px;
+border:none;
+border-radius:40px;
+background:linear-gradient(90deg,#ffd21f,#ff7b00);
+color:black;
+font-weight:600;
+cursor:pointer;
+transition:0.35s;
+box-shadow:0 10px 30px rgba(0,0,0,0.3);
+animation:fadeUp 2s ease;
+}
+
+.hero-btn:hover{
+transform:translateY(-5px) scale(1.05);
+box-shadow:0 20px 40px rgba(0,0,0,0.4);
+}
+
+
+@keyframes fadeUp{
+from{
+opacity:0;
+transform:translateY(40px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+nav{
+box-shadow:0 5px 20px rgba(0,0,0,0.1);
+}
+img{
+    width: 200px;
+}
+nav{
+position:fixed;
+top:0;
+width:100%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 50px;
+
+background: rgba(255,255,255,0.3);
+backdrop-filter:blur(10px);
+
+z-index:1000;
+}
+
+
+.logo{
+font-size:24px;
+font-weight:bold;
+letter-spacing:2px;
+}
+
+
+.nav-links{
+display:flex;
+gap:30px;
+list-style:none;
+}
+
+.nav-links a{
+text-decoration:none;
+color:black;
+font-size:16px;
+font-weight: bold;
+position:relative;
+padding:5px 0;
+}
+
+
+.nav-links a::after{
+content:"";
+position:absolute;
+left:0;
+bottom:-4px;
+width:0%;
+height:2px;
+background:#ffd21f;
+transition:0.4s;
+}
+
+.nav-links a:hover::after{
+width:100%;
+}
+
+
+.hamburger{
+display:none;
+flex-direction:column;
+cursor:pointer;
+gap:5px;
+}
+
+.hamburger span{
+width:25px;
+height:3px;
+background:black;
+transition:0.4s;
+}
+
+
+@media(max-width:768px){
+
+.nav-links{
+position:absolute;
+top:70px;
+right:-100%;
+flex-direction:column;
+background:rgba(0,0,0,0.9);
+width:220px;
+padding:30px;
+height:calc(100vh - 70px);
+transition:0.4s;
+}
+
+.nav-links.active{
+right:0;
+}
+
+.hamburger{
+display:flex;
+}
+
+}
+
+
+.hamburger.active span:nth-child(1){
+transform:rotate(45deg) translate(5px,5px);
+}
+
+.hamburger.active span:nth-child(2){
+opacity:0;
+}
+
+.hamburger.active span:nth-child(3){
+transform:rotate(-45deg) translate(6px,-6px);
+}
+
+p{
+    width: 50%;
+}
+h1{
+
+}
