@@ -16,7 +16,7 @@
 
 <ul class="nav-links">
 <li><a href="#">Home</a></li>
-<li><a href="#">About</a></li>
+<li><a href="#about">About</a></li>
 <li><a href="#">Services</a></li>
 <li><a href="#">Contact</a></li>
 <li><a href="#">cnsss</a></li>
@@ -42,43 +42,23 @@
 Skill & career alignment means building the right abilities that match the direction you want your career to grow. When your learning, projects, and experience align with your long-term goals, opportunities become clearer and progress becomes faster.
 </p>
 
-<button class="hero-btn">Start Your Journey</button>
+<button class="hero-btn">Book a Session</button>
 
 </div>
 
 </section>
-<section style="text-align:center; max-width:600px; margin:auto; padding:40px 20px;">
-
-  <img src="your-photo.jpg" 
-       alt="My Photo"
-       style="width:160px; height:160px; border-radius:50%; object-fit:cover; margin-bottom:20px;">
-
-  <h1>About Me</h1>
-
-  <p style="font-size:16px; line-height:1.6;">
-    Hello! I'm <strong>Your Name</strong>. I enjoy learning new things, building projects,
-    and exploring technology. I like solving problems and creating things that are useful
-    and interesting.
-  </p>
-
-  <p style="font-size:16px; line-height:1.6;">
-    In my free time I enjoy experimenting with coding, discovering new ideas, and improving
-    my skills. I'm always curious and excited to learn something new.
-  </p>
-
+<section class="hero-mega" id="about">
+<div class="hero-grid">
+<div class="hero-left">
+<h1 class="hero-title">So, who am I?</h1>
+<p class="hero-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem corrupti at dignissimos tempore modi error, incidunt earum dolores! Placeat reprehenderit magnam distinctio nisi adipisci dolores quae tempora delectus libero amet!</p>
+<button class="hero-btn">Contact me</button>
+</div>
+<div class="hero-right">
+<img src="about.jpg" class="hero-img" alt="About Image">
+</div>
+</div>
 </section>
-    <script>
-
-    const hamburger = document.querySelector(".hamburger")
-    const navLinks = document.querySelector(".nav-links")
-
-    hamburger.addEventListener("click", () => {
-
-    hamburger.classList.toggle("active")
-    navLinks.classList.toggle("active")
-
-    
-})
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
