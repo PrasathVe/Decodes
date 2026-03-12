@@ -173,8 +173,7 @@ animation:fadeUp 1.5s ease;
 }
 
 .hero-btn{
-margin-top:30px;
-padding:14px 34px;
+margin-top:10px;
 border:none;
 border-radius:40px;
 background:linear-gradient(90deg,#ffd21f,#ff7b00);
